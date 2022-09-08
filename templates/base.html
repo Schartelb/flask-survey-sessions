@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css.css">
+    <title name="title">{% block title%}TITLE{% endblock %}</title>
+</head>
+
+<body>
+    <content>
+        {% block content%}
+        {% for msg in get_flashed_messages() %}
+        <p>{{ msg }}</p>
+        {% endfor %}
+        BODY CONTENT
+        {% endblock %}
+    </content>
+</body>
+
+</html>
